@@ -104,13 +104,12 @@ body {
     }
 
     body {
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .quote-card {
         max-width: 60%;
         padding: 0;
-        margin-bottom: 50%;
         padding: 1.5rem;
     }
 
