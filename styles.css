@@ -1,0 +1,132 @@
+body {
+  font-family: "New Rocker" , sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.web-name {
+  color: #4CAF50;
+  font-size: 3em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.quote-card {
+
+    font-family: "Expletus Sans", sans-serif;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    max-width: 1000px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote-line {
+  font-size: 1.7em;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  color: #bb86fc;
+}
+
+.author-name {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #999;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+
+#refresh-btn {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#refresh-btn:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+.quote-line, .author-name {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+
+
+/*////////for mobile//////*/
+
+@media (max-width: 768px) {
+
+    .web-name {
+        max-width: 40%;
+        text-transform: uppercase;
+        margin-top: 20%;
+    }
+
+    body {
+        justify-content: space-between;
+    }
+
+    .quote-card {
+        max-width: 60%;
+        padding: 0;
+        margin-bottom: 50%;
+        padding: 1.5rem;
+    }
+
+    .quote-line{
+        font-size: 1.5rem;
+    }
+
+    .author-name{
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    #refresh-btn {
+        margin-top: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+}
